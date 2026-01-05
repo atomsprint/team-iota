@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "地球（ラフ　透明化）.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "地球（ラフ　透明化）@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "地球（ラフ　透明化）@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
