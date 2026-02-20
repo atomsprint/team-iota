@@ -153,8 +153,12 @@
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                     <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="addPointButtonTapped:" destination="NAy-kF-79h" eventType="touchUpInside" id="IPA-Gs-uLT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYa-EQ-t8O">
                                 <rect key="frame" x="201" y="658" width="133" height="91"/>
@@ -165,13 +169,21 @@
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                     </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="NAy-kF-79h" eventType="touchUpInside" id="An6-OJ-mgs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qy9-Lb-6yo"/>
                         <color key="backgroundColor" systemColor="tableCellBlueTextColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="tQQ-9V-CVv"/>
+                    <connections>
+                        <outlet property="iotaImageView" destination="dCe-y7-wbt" id="TBO-K7-NJK"/>
+                        <outlet property="pointLabel" destination="r2o-jm-nvJ" id="omI-Lh-hMh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wra-xs-8JO" sceneMemberID="firstResponder"/>
             </objects>
