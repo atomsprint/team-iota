@@ -21,14 +21,14 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        quizList.shuffle()
+        quizlist.shuffle()
 
         showQuestion()
     }
 
     func showQuestion() {
         // quizListから現在の問題を取得
-        let quiz = quizList[questionNumber]
+        let quiz = quizlist[questionNumber]
         
         quizNumberLabel.text = "第" + String(questionNumber + 1) + "問"
         quizLabel.text = quiz.question
@@ -41,7 +41,7 @@ class QuizViewController: UIViewController {
     }
     
     func checkAnswer(selected: Bool) {
-        let quiz = quizList[questionNumber]
+        let quiz = quizlist[questionNumber]
         
         if selected == quiz.answer {
             resultLabel.text = "⭕️"
@@ -55,7 +55,7 @@ class QuizViewController: UIViewController {
         maruButton.isEnabled = false
         batsuButton.isEnabled = false
         
-        if questionNumber == quizList.count - 1 {
+        if questionNumber == quizlist.count - 1 {
             nextButton.setTitle("結果を見る", for: .normal)
         }
         nextButton.isHidden = false
@@ -73,7 +73,7 @@ class QuizViewController: UIViewController {
         // 問題番号を1つ進める
         questionNumber = questionNumber + 1
         // まだ問題が残ってるかチェック
-        if questionNumber < quizList.count {
+        if questionNumber < quizlist.count {
             // 次の問題を表示
             showQuestion()
         } else {

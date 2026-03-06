@@ -14,7 +14,7 @@ struct Quiz {
     
 }
 
-let quizlist = [
+var quizlist = [
     Quiz(
         question: "マイクロプラスチックとは、5mm以下の小さなプラスチックのことである。",
         answer: true,

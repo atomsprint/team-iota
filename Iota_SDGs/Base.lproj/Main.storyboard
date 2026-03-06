@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1131" y="4"/>
+            <point key="canvasLocation" x="1166" y="4"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="2x3-7y-qVk">
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wra-xs-8JO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3085" y="4"/>
+            <point key="canvasLocation" x="3123" y="23"/>
         </scene>
         <!--Third View Controller-->
         <scene sceneID="FuH-zj-0Wl">
@@ -226,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PR-a2-fzc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3085" y="873"/>
+            <point key="canvasLocation" x="3147" y="873"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="uop-V2-dt7">
@@ -328,13 +328,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="e5H-RF-zqy"/>
                     <connections>
-                        <outlet property="batuButton" destination="6xf-Y5-iIU" id="iEt-Ww-bgG"/>
+                        <outlet property="batsuButton" destination="6xf-Y5-iIU" id="2DK-Lg-OWg"/>
                         <outlet property="maruButton" destination="us5-PS-YAr" id="rG1-bp-q7d"/>
                         <outlet property="nextButton" destination="Klg-fi-f1e" id="Jym-G6-ROe"/>
                         <outlet property="quizLabel" destination="WVo-lD-3ex" id="BW5-fK-Gv4"/>
                         <outlet property="quizNumberLabel" destination="5v6-9N-yVN" id="KNj-Mz-utt"/>
                         <outlet property="resultLabel" destination="oCX-eH-yDq" id="MG6-iT-Xvf"/>
-                        <segue destination="l13-f5-Xye" kind="presentation" id="Gi3-pg-ClQ"/>
+                        <segue destination="l13-f5-Xye" kind="presentation" identifier="toResult" id="Gi3-pg-ClQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efh-oI-VXf" sceneMemberID="firstResponder"/>
@@ -457,12 +457,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HT3-7k-doh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="873"/>
+            <point key="canvasLocation" x="120" y="873"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Jp0-rc-voI">
             <objects>
-                <viewController storyboardIdentifier="fourViewController" id="l13-f5-Xye" customClass="ResultViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="l13-f5-Xye" customClass="ResultViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wT2-XC-4Jy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -496,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODY-Wg-Ej3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2011" y="861"/>
+            <point key="canvasLocation" x="2172" y="873"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
