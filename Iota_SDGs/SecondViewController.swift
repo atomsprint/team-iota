@@ -13,44 +13,48 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var pointLabel: UILabel!
     
     let pointlmageDictionary:[Int:String]=[
-        0:"iota-1",
-        10:"iota-2",
-        20:"iota-3",
-        30:"iota-4",
-        40:"iota-5",
-        50:"iota-6",
-        60:"iota-7",
-        70:"iota-8",
-        80:"iota-9",
-        90:"iota-gold"
+        0:"iota-removebg-preview",
+        10:"iota-1",
+        20:"iota-2",
+        30:"iota-3",
+        40:"iota-4",
+        50:"iota-5",
+        60:"iota-6",
+        70:"iota-7",
+        80:"iota-8",
+        90:"iota-9",
+        100:"iota-gold"
     ]
-    var currentPoint: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentPoint = 0
-        iotaImageView?.image = UIImage(named: "iota-1")
+        // 通知を受け取って表示を更新
+        NotificationCenter.default.addObserver(self, selector: #selector(updatePointDisplay), name: .pointsUpdated, object: nil)
         updatePointDisplay()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 表示するたび最新のポイントにする
+        updatePointDisplay()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
         
         @IBAction func addPointButtonTapped(_ sender: Any) {
-            currentPoint += 10
-            if currentPoint > 90 {
-                currentPoint = 90
-            }
-            updatePointDisplay()
-            
+            PointsManager.shared.add(10)
         }
         
         @IBAction func clearButtonTapped(_ sender: Any) {
-            currentPoint = 0
-            updatePointDisplay()
+            PointsManager.shared.reset()
         }
         
-        func updatePointDisplay() {
-            // ポイント数に応じて画像を変更
-            let imageKey = (currentPoint / 10) * 10
+        @objc func updatePointDisplay() {
+            let currentPoint = PointsManager.shared.points
+            // ポイント数に応じて画像を変更（100pt以上はiota-gold固定）
+            let imageKey = min((currentPoint / 10) * 10, 100)
             if let imageName = pointlmageDictionary[imageKey] {
                 iotaImageView?.image = UIImage(named: imageName)
             }

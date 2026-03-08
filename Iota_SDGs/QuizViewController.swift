@@ -47,6 +47,8 @@ class QuizViewController: UIViewController {
             resultLabel.text = "⭕️"
             resultLabel.textColor = .red
             correctCount += 1
+            // 正解ならポイントを追加
+            PointsManager.shared.add(10)
         } else {
             resultLabel.text = "❌"
             resultLabel.textColor = .blue
