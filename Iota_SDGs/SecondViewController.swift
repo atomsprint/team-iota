@@ -47,6 +47,11 @@ class SecondViewController: UIViewController {
             PointsManager.shared.add(10)
         }
         
+        @IBAction func subtractPointButtonTapped(_ sender: Any) {
+            // デバッグ用にマイナス10ポイント
+            PointsManager.shared.add(-10)
+        }
+        
         @IBAction func clearButtonTapped(_ sender: Any) {
             PointsManager.shared.reset()
         }

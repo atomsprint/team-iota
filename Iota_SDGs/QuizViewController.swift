@@ -52,6 +52,8 @@ class QuizViewController: UIViewController {
         } else {
             resultLabel.text = "❌"
             resultLabel.textColor = .blue
+            // 不正解ならポイントを減らす
+            PointsManager.shared.subtract(10)
         }
         
         maruButton.isEnabled = false

@@ -24,6 +24,12 @@ class PointsManager {
             points = 0
         }
     }
+
+    /// ポイントを減らす
+    func subtract(_ amount: Int) {
+        guard amount > 0 else { return }
+        add(-amount)
+    }
     
     /// ポイントをリセットする
     func reset() {
