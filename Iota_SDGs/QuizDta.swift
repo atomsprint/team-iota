@@ -64,5 +64,28 @@ var quizlist = [
         question: "再生可能エネルギー（太陽光や風力など）の割合を増やすことが、2030年までの目標に含まれている。",
         answer: true,
         comment: "地球温暖化を防ぐため、クリーンなエネルギーへの転換が急がれています。"
+    ),
+    Quiz(
+        question: "アイデアがあったら書いてください",
+        answer: false,
+        comment: "アイデアがあったら書いてください"
+    ),    Quiz(
+        question: "アイデアがあったら書いてください",
+        answer: false,
+        comment: "アイデアがあったら書いてください"
+    ),
+    Quiz(
+        question: "アイデアがあったら書いてください",
+        answer: false,
+        comment: "アイデアがあったら書いてください"
+    ),
+    Quiz(
+        question: "アイデアがあったら書いてください",
+        answer: false,
+        comment: "アイデアがあったら書いてください"
+    ),    Quiz(
+        question: "アイデアがあったら書いてください",
+        answer: false,
+        comment: "アイデアがあったら書いてください"
     )
 ]

@@ -74,27 +74,18 @@ class QuizViewController: UIViewController {
     }
     
     @IBAction func nextTapped(_ sender: Any) {
-        // 問題番号を1つ進める
         questionNumber = questionNumber + 1
-        // まだ問題が残ってるかチェック
         if questionNumber < quizlist.count {
-            // 次の問題を表示
             showQuestion()
         } else {
-            // 全問終了 → 結果画面へ移動
             performSegue(withIdentifier: "toResult", sender: nil)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // Segueの名前が"toResult"なら
         if segue.identifier == "toResult" {
-            
-            // 次の画面（ResultViewController）を取得
             let resultVC = segue.destination as! ResultViewController
-            
-            // 正解数を渡す
+
             resultVC.correctCount = correctCount
         }
     }
