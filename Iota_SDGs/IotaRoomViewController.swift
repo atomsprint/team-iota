@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class IotaRoomViewController: UIViewController {
 
     @IBOutlet weak var iotaImageView: UIImageView!
     @IBOutlet weak var pointLabel: UILabel!

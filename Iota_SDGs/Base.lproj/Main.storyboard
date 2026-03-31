@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3f1-WO-yfH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3f1-WO-yfH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="2172" y="23"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Iota Room View Controller-->
         <scene sceneID="2x3-7y-qVk">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="NAy-kF-79h" customClass="SecondViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="NAy-kF-79h" customClass="IotaRoomViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZTM-rb-eKO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,10 +178,10 @@
             </objects>
             <point key="canvasLocation" x="3122.9007633587785" y="22.535211267605636"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Point Page View Controller-->
         <scene sceneID="FuH-zj-0Wl">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="s6v-G3-9sp" customClass="ThirdViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ThirdViewController" id="s6v-G3-9sp" customClass="PointPageViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGp-eQ-ivc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -386,10 +386,10 @@
             </objects>
             <point key="canvasLocation" x="120" y="4"/>
         </scene>
-        <!--Five View Controller-->
+        <!--Ranking View Controller-->
         <scene sceneID="kmr-YX-dyG">
             <objects>
-                <viewController storyboardIdentifier="fiveViewController" id="X37-mA-vcS" customClass="fiveViewController" customModule="Iota_SDGs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fiveViewController" id="X37-mA-vcS" customClass="RankingViewController" customModule="Iota_SDGs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="019-dm-YLF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
