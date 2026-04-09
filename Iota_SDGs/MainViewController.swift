@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class MainViewController: UIViewController {
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {}
     override func viewDidLoad() {
         super.viewDidLoad()
