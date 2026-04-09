@@ -9,12 +9,31 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadSettings()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        saveSettings()
+    }
+
+    func saveSettings() {
+        SettingsManager.shared.userName = nameTextField.text ?? ""
+        SettingsManager.shared.userAge = ageTextField.text ?? ""
+    }
+
+    func loadSettings() {
+        SettingsManager.shared.loadSettings()
+        nameTextField.text = SettingsManager.shared.userName
+        ageTextField.text = SettingsManager.shared.userAge
+    }
 
     /*
     // MARK: - Navigation
