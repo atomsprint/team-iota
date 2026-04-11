@@ -320,10 +320,10 @@
             </objects>
             <point key="canvasLocation" x="3145.801526717557" y="872.53521126760563"/>
         </scene>
-        <!--Point Page View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="zlG-Am-Yo6">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="WQn-U6-avn" customClass="PointPageViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WQn-U6-avn" customClass="startViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4V3-yY-Nou">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
