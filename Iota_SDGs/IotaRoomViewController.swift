@@ -10,61 +10,35 @@ import UIKit
 class IotaRoomViewController: UIViewController {
 
     @IBOutlet weak var iotaImageView: UIImageView!
-    @IBOutlet weak var pointLabel: UILabel!
+    @IBOutlet weak var Item1ImageView: UIImageView!
     
-    let pointlmageDictionary:[Int:String]=[
-        0:"iota-removebg-preview",
-        10:"iota-1",
-        20:"iota-2",
-        30:"iota-3",
-        40:"iota-4",
-        50:"iota-5",
-        60:"iota-6",
-        70:"iota-7",
-        80:"iota-8",
-        90:"iota-9",
-        100:"iota-gold"
-    ]
+    private var panGesture: UIPanGestureRecognizer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 通知を受け取って表示を更新
-        NotificationCenter.default.addObserver(self, selector: #selector(updatePointDisplay), name: .pointsUpdated, object: nil)
-        updatePointDisplay()
+    
+        // ドラッグジェスチャーの初期化
+        panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
+        
+        // ドラッグジェスチャーを追加
+        Item1ImageView.addGestureRecognizer(panGesture!)
+        Item1ImageView.isUserInteractionEnabled = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // 表示するたび最新のポイントにする
-        updatePointDisplay()
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
         
-        @IBAction func addPointButtonTapped(_ sender: Any) {
-            PointsManager.shared.add(10)
+    @objc func handlePan(_ gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: view)
+        if let view = gesture.view {
+            view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
         }
+        gesture.setTranslation(.zero, in: view)
+    }
         
-        @IBAction func subtractPointButtonTapped(_ sender: Any) {
-            // デバッグ用にマイナス10ポイント
-            PointsManager.shared.add(-10)
-        }
-        
-        @IBAction func clearButtonTapped(_ sender: Any) {
-            PointsManager.shared.reset()
-        }
-        
-        @objc func updatePointDisplay() {
-            let currentPoint = PointsManager.shared.points
-            // ポイント数に応じて画像を変更（100pt以上はiota-gold固定）
-            let imageKey = min((currentPoint / 10) * 10, 100)
-            if let imageName = pointlmageDictionary[imageKey] {
-                iotaImageView?.image = UIImage(named: imageName)
-            }
-            
-            // ラベルを更新
-            pointLabel?.text = "今は\(currentPoint)ptだよ！"
-        }
 }

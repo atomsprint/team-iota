@@ -35,6 +35,18 @@ class SettingViewController: UIViewController {
         ageTextField.text = SettingsManager.shared.userAge
     }
 
+    @IBAction func addPointButtonTapped(_ sender: Any) {
+        PointsManager.shared.add(10)
+    }
+    
+    @IBAction func subtractPointButtonTapped(_ sender: Any) {
+        PointsManager.shared.add(-10)
+    }
+    
+    @IBAction func clearButtonTapped(_ sender: Any) {
+        PointsManager.shared.reset()
+    }
+
     /*
     // MARK: - Navigation
 
