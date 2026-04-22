@@ -45,20 +45,20 @@ class ResultViewController: UIViewController {
     }
 
     func showResult() {
-            if correctCount == 3 {
-                resultLabel.text = "🌟 かんぺき！ 🌟\n\n3問せいかい！\n\n宇宙博士！"
+            if correctCount == 5 {
+                resultLabel.text = "🌟かんぺき！🌟"
                 resultLabel.textColor = .orange
                 
-            } else if correctCount == 2 {
-                resultLabel.text = "🥈 すごい！ 🥈\n\n2問せいかい！\n\nもうちょっと！"
+            } else if correctCount == 4 {
+                resultLabel.text = "🥈すごい！🥈"
                 resultLabel.textColor = .green
                 
-            } else if correctCount == 1 {
-                resultLabel.text = "🥉 がんばった！ 🥉\n\n1問せいかい！\n\n次はもっとできるよ！"
+            } else if correctCount == 3 {
+                resultLabel.text = "🥉がんばった！🥉"
                 resultLabel.textColor = .blue
                 
             } else {
-                resultLabel.text = "📚 ざんねん 📚\n\n0問せいかい...\n\nまた挑戦してね！"
+                resultLabel.text = "📚ざんねん📚"
                 resultLabel.textColor = .gray
             }
         }
