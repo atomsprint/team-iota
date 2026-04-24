@@ -22,7 +22,7 @@ class QuizViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         quizlist.shuffle()
-
+        quizlist = Array(quizlist.prefix(5))
         showQuestion()
     }
 
