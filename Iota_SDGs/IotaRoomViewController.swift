@@ -36,13 +36,13 @@ class IotaRoomViewController: UIViewController {
         // アイテム画像ビューをポイントをキーとした辞書にまとめる
         itemViewsByPoints = [
             0: Item1ImageView,   // Item1 は常に表示（0ポイント）
-            10: Item2ImageView,  // Item2 は10ポイント以上
-            20: Item3ImageView,  // Item3 は20ポイント以上
-            30: Item4ImageView,  // Item4 は30ポイント以上
-            40: Item5ImageView,  // Item5 は40ポイント以上
-            50: Item6ImageView,  // Item6 は50ポイント以上
-            60: Item7ImageView,  // Item7 は60ポイント以上
-            70: Item9ImageView   // Item9 は70ポイント以上
+            100: Item2ImageView,  // Item2 は10ポイント以上
+            200: Item3ImageView,  // Item3 は20ポイント以上
+            400: Item4ImageView,  // Item4 は30ポイント以上
+            800: Item5ImageView,  // Item5 は40ポイント以上
+            1400: Item6ImageView,  // Item6 は50ポイント以上
+            2000: Item7ImageView,  // Item7 は60ポイント以上
+            3000: Item9ImageView   // Item9 は70ポイント以上
         ].compactMapValues { $0 }
         
         // 全てのアイテムにドラッグ機能を設定
