@@ -13,7 +13,7 @@
             <objects>
                 <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iota-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-Q6-mvB">
@@ -131,7 +131,7 @@
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="NAy-kF-79h" customClass="IotaRoomViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZTM-rb-eKO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fukidashi2" translatesAutoresizingMaskIntoConstraints="NO" id="bzg-Vo-ag3">
@@ -250,7 +250,7 @@
             <objects>
                 <viewController id="G4M-vn-6rq" customClass="SettingViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YRz-24-VHo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwi-Z3-ifA">
@@ -349,7 +349,7 @@
             <objects>
                 <viewController storyboardIdentifier="ThirdViewController" id="s6v-G3-9sp" customClass="PointPageViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cGp-eQ-ivc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fukidashi3" translatesAutoresizingMaskIntoConstraints="NO" id="Fvr-3s-HtH">
@@ -451,21 +451,63 @@
         <scene sceneID="fpu-Aa-TyA">
             <objects>
                 <viewController id="zoP-aI-iHO" customClass="HelpViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="csL-l6-WUV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="csL-l6-WUV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ヘルプ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMx-3i-NPM">
-                                <rect key="frame" x="16" y="147" width="361" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.4823529412" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <color key="textColor" red="0.94901960784313721" green="0.63529411764705879" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rly-nF-Tvl">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.8344726562" green="0.9106445312" blue="0.869140625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.8344726562" green="0.9106445312" blue="0.869140625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Id2-rk-aFF"/>
+                                </constraints>
+                                <mutableString key="text">アプリの つかいかた
+SDGsって なに？
+ずっと、人間も 生き物も 自然も、みんなで しあわせに くらせる 地球に するための、大事な やくそく。それがSDGsです！
+
+このアプリでは、SDGsについて まなびながら、自分に できることを やってみることで、ポイントを ためていきます。
+君1人の力は 小さく見えても、みんなの 取り組みが あつまれば、とっても 大きな 力に なります！
+
+とりくみページ
+画面を ひらいて すぐに見えるのが、今日のオススメです。そこに 書いてあることが 1個できたら、となりの スイッチを おしてね。3つ 全部できたら、ポイントが もらえるよ！
+
+もっと いろいろなことに ちょうせんしたい時は、上の とりくみ一らんを おしてね。1つ やるごとに ポイントが もらえます。むずかしいことに チャレンジするほど、たくさん ポイントが もらえるよ！
+
+クイズページ
+SDGsの ◯×クイズに ちょうせんできます。
+5問 ときおわったら、ポイントが もらえるよ。
+せいかいすると 10ポイント増えます。
+まちがえると 10ポイントへっちゃうから、気をつけよう！
+
+イオタ君ページ
+イオタ君は、このアプリの マスコットキャラクターです。
+ポイントを たくさん ゲットすると、イオタ君の アイテムが 増えていきます。君だけの デザインに してあげてね！
+
+ホーム画面
+ホームに ある 地球は、君が がんばるほど きれいになっていきます。
+でも、何日も なにもしないでいると、だんだん よごれていっちゃうんだ。毎日 すこしずつ がんばろう！
+
+ランキングページ
+ここでは、全国の みんなと ポイントを きそいあいます。
+みんなに まけないように、たくさん エコなことをして、1位を めざそう！</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pch-7t-JkK"/>
                         <color key="backgroundColor" red="0.81568627450980391" green="0.9137254901960784" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rly-nF-Tvl" secondAttribute="bottom" id="3hh-7T-FnA"/>
+                            <constraint firstItem="rly-nF-Tvl" firstAttribute="trailing" secondItem="pch-7t-JkK" secondAttribute="trailing" id="7L4-aX-HH7"/>
+                            <constraint firstItem="rly-nF-Tvl" firstAttribute="top" secondItem="csL-l6-WUV" secondAttribute="top" id="Fdg-Hf-cFE"/>
+                            <constraint firstItem="rly-nF-Tvl" firstAttribute="leading" secondItem="pch-7t-JkK" secondAttribute="leading" id="iyB-h7-tTN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r79-v1-JQY"/>
                 </viewController>
@@ -478,7 +520,7 @@
             <objects>
                 <viewController id="D4l-6a-HCz" customClass="MissionViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bBW-v7-1eI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ny6-n4-5ZW">
@@ -633,7 +675,7 @@
             <objects>
                 <viewController storyboardIdentifier="fourViewController" id="yxg-mt-Kyq" customClass="QuizViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7pu-jc-V4l">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyJ-hr-dzc">
@@ -770,7 +812,7 @@
             <objects>
                 <viewController storyboardIdentifier="fiveViewController" id="X37-mA-vcS" customClass="RankingViewController" customModule="Iota_SDGs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="019-dm-YLF">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="一位　Aさん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMW-qr-oB8">
@@ -866,7 +908,7 @@
             <objects>
                 <viewController storyboardIdentifier="ResultViewController" id="l13-f5-Xye" customClass="ResultViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wT2-XC-4Jy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U6-3a-OB1">
@@ -902,7 +944,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="njC-cm-o6d"/>
+        <segue reference="pDi-2W-Bjk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
@@ -920,6 +962,9 @@
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <image name="スクリーンショット 2026-04-20 20.52.50" width="69.333335876464844" height="17.333333969116211"/>
         <image name="地球（ラフ　透明化）" width="256" height="384"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
