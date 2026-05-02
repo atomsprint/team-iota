@@ -119,7 +119,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="earthImageView" destination="H2K-Jf-7Se" id="qeL-pa-7Kd"/>
                         <outlet property="pointLabel" destination="tC5-JH-fUv" id="S41-0l-CKS"/>
                     </connections>
                 </viewController>
@@ -423,13 +422,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lz-cD-Ij6">
-                                <rect key="frame" x="63" y="645" width="266" height="102"/>
+                                <rect key="frame" x="45" y="665" width="312" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <color key="tintColor" systemColor="tintColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="スタート‼️">
+                                <buttonConfiguration key="configuration" style="filled" title="スタート！！">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="44"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.40000000000000002" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -452,21 +451,63 @@
         <scene sceneID="fpu-Aa-TyA">
             <objects>
                 <viewController id="zoP-aI-iHO" customClass="HelpViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="csL-l6-WUV">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="csL-l6-WUV">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ヘルプ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMx-3i-NPM">
-                                <rect key="frame" x="16" y="147" width="361" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.4823529412" green="0.6705882353" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <color key="textColor" red="0.94901960784313721" green="0.63529411764705879" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rly-nF-Tvl">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.8344726562" green="0.9106445312" blue="0.869140625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.8344726562" green="0.9106445312" blue="0.869140625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Id2-rk-aFF"/>
+                                </constraints>
+                                <string key="text">アプリの つかいかた
+SDGsって なに？
+ずっと、人間も 生き物も 自然も、みんなで しあわせに くらせる 地球に するための、大事な やくそく。それがSDGsです！
+
+このアプリでは、SDGsについて まなびながら、自分に できることを やってみることで、ポイントを ためていきます。
+君1人の力は 小さく見えても、みんなの 取り組みが あつまれば、とっても 大きな 力に なります！
+
+とりくみページ
+画面を ひらいて すぐに見えるのが、今日のオススメです。そこに 書いてあることが 1個できたら、となりの スイッチを おしてね。3つ 全部できたら、ポイントが もらえるよ！
+
+もっと いろいろなことに ちょうせんしたい時は、上の とりくみ一らんを おしてね。1つ やるごとに ポイントが もらえます。むずかしいことに チャレンジするほど、たくさん ポイントが もらえるよ！
+
+クイズページ
+SDGsの ◯×クイズに ちょうせんできます。
+5問 ときおわったら、ポイントが もらえるよ。
+せいかいすると 10ポイント増えます。
+まちがえると 10ポイントへっちゃうから、気をつけよう！
+
+イオタ君ページ
+イオタ君は、このアプリの マスコットキャラクターです。
+ポイントを たくさん ゲットすると、イオタ君の アイテムが 増えていきます。君だけの デザインに してあげてね！
+
+ホーム画面
+ホームに ある 地球は、君が がんばるほど きれいになっていきます。
+でも、何日も なにもしないでいると、だんだん よごれていっちゃうんだ。毎日 すこしずつ がんばろう！
+
+ランキングページ
+ここでは、全国の みんなと ポイントを きそいあいます。
+みんなに まけないように、たくさん エコなことをして、1位を めざそう！</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pch-7t-JkK"/>
                         <color key="backgroundColor" red="0.81568627450980391" green="0.9137254901960784" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rly-nF-Tvl" secondAttribute="bottom" id="3hh-7T-FnA"/>
+                            <constraint firstItem="rly-nF-Tvl" firstAttribute="trailing" secondItem="pch-7t-JkK" secondAttribute="trailing" id="7L4-aX-HH7"/>
+                            <constraint firstItem="rly-nF-Tvl" firstAttribute="top" secondItem="csL-l6-WUV" secondAttribute="top" id="Fdg-Hf-cFE"/>
+                            <constraint firstItem="rly-nF-Tvl" firstAttribute="leading" secondItem="pch-7t-JkK" secondAttribute="leading" id="iyB-h7-tTN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r79-v1-JQY"/>
                 </viewController>
@@ -921,6 +962,9 @@
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <image name="スクリーンショット 2026-04-20 20.52.50" width="69.333335876464844" height="17.333333969116211"/>
         <image name="地球（ラフ 透明化）" width="256" height="384"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
