@@ -1,10 +1,3 @@
-//
-//  FirstViewController.swift
-//  Iota_SDGs
-//
-//  Created by 永田　花道 on 2025/11/09.
-//
-
 import UIKit
 
 class MainViewController: UIViewController {
@@ -12,55 +5,68 @@ class MainViewController: UIViewController {
     @IBOutlet weak var earthImageView: UIImageView!
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {}
+
+    let pointlmageDictionary: [Int: String] = [
+        0: "地球1",
+        100: "地球2",
+        300: "地球2",
+        600: "地球２",
+        1000: "地球2",
+        1300: "地球3",
+        1500: "地球3",
+        1900: "地球3",
+        2400: "地球3",
+        2900: "地球4",
+        3500: "地球4"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updatePointsLabel()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(pointsUpdated), name: .pointsUpdated, object: nil)
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updatePointsLabel()
         updateImage()
     }
     
-    let pointlmageDictionary:[Int:String]=[
-        0:"地球（ラフ 透明化）",
-        100:"地球（ラフ 透明化）",
-        300:"地球（ラフ 透明化）",
-        700:"地球（ラフ 透明化）",
-        1000:"地球（ラフ 透明化）",
-        1300:"地球（ラフ 透明化）",
-        1700:"地球（ラフ 透明化）",
-        2000:"地球（ラフ 透明化）",
-        2500:"地球（ラフ 透明化）",
-        2900:"地球（ラフ 透明化）",
-        3500:"地球（ラフ 透明化）"]
-
-    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
     @objc func pointsUpdated() {
-            updatePointsLabel()
-            updateImage()
+        updatePointsLabel()
+        updateImage()
+    }
+
+    func updatePointsLabel() {
+        let account = AccountManager.shared.getCurrentAccount()
+        let name = account.name.isEmpty ? "ゲスト" : account.name
+        pointLabel.text = "\(name)さんは現在\(account.points)ポイントです"
+    }
+
+    func updateImage() {
+        let account = AccountManager.shared.getCurrentAccount()
+        let currentPoint = account.points
+
+        let sortedKeys = pointlmageDictionary.keys.sorted(by: >)
+        var targetKey = 0
+        
+        for key in sortedKeys {
+            if currentPoint >= key {
+                targetKey = key
+                break
+            }
         }
 
-        func updatePointsLabel() {
-            let account = AccountManager.shared.getCurrentAccount()
-            let name = account.name.isEmpty ? "ゲスト" : account.name
-            pointLabel.text = "\(name)さんは現在\(account.points)ポイントです"
-        }
-
-        func updateImage() {
-            let account = AccountManager.shared.getCurrentAccount()
-            let currentPoint = account.points
+        if let imageName = pointlmageDictionary[targetKey] {
+            earthImageView?.image = UIImage(named: imageName)
             
-            let imageKey = min((currentPoint / 10) * 10, 100)
-            if let imageName = pointlmageDictionary[imageKey] {
-                earthImageView?.image = UIImage(named: imageName)
+            if earthImageView?.image == nil {
+                print("エラー発生！")
             }
         }
     }
+}
