@@ -1,10 +1,3 @@
-//
-//  fourViewController.swift
-//  Iota_SDGs
-//
-//  Created by 永田　花道 on 2025/11/10.
-//
-
 import UIKit
 
 class SettingViewController: UIViewController {
@@ -12,49 +5,46 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        loadSettings()
+        nameTextField.addTarget(self, action: #selector(nameDidChange), for: .editingChanged)
     }
-    
+
+    @objc func nameDidChange(_ textField: UITextField) {
+        let name = textField.text ?? ""
+        if name.isEmpty { return }
+        AccountManager.shared.currentUserName = name
+        let account = AccountManager.shared.getCurrentAccount()
+        
+        // 切り替わった人の年齢を画面に出す
+        ageTextField.text = account.age
+        
+
+    }
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        saveSettings()
+        saveCurrentUserData()
     }
 
-    func saveSettings() {
-        SettingsManager.shared.userName = nameTextField.text ?? ""
-        SettingsManager.shared.userAge = ageTextField.text ?? ""
-    }
-
-    func loadSettings() {
-        SettingsManager.shared.loadSettings()
-        nameTextField.text = SettingsManager.shared.userName
-        ageTextField.text = SettingsManager.shared.userAge
+    func saveCurrentUserData() {
+        let name = nameTextField.text ?? ""
+        if name.isEmpty { return }
+        
+        AccountManager.shared.currentUserName = name
+        AccountManager.shared.updateAccount(age: ageTextField.text ?? "")
     }
 
     @IBAction func addPointButtonTapped(_ sender: Any) {
-        PointsManager.shared.add(10)
-    }
-    
-    @IBAction func subtractPointButtonTapped(_ sender: Any) {
-        PointsManager.shared.add(-10)
-    }
-    
-    @IBAction func clearButtonTapped(_ sender: Any) {
-        PointsManager.shared.reset()
-    }
+        let name = nameTextField.text ?? ""
+        if name.isEmpty { return }
 
-    /*
-    // MARK: - Navigation
+        var account = AccountManager.shared.getCurrentAccount()
+        account.points += 10
+        AccountManager.shared.updateAccount(age: ageTextField.text ?? "", points: account.points)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }

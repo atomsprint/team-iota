@@ -19,15 +19,12 @@ class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         quizlist.shuffle()
         quizlist = Array(quizlist.prefix(5))
         showQuestion()
     }
 
     func showQuestion() {
-        // quizListから現在の問題を取得
         let quiz = quizlist[questionNumber]
         
         quizNumberLabel.text = "第" + String(questionNumber + 1) + "問"
@@ -41,30 +38,33 @@ class QuizViewController: UIViewController {
     }
     
     func checkAnswer(selected: Bool) {
-        let quiz = quizlist[questionNumber]
-        
-        if selected == quiz.answer {
-            resultLabel.text = "⭕️"
-            resultLabel.textColor = .red
-            correctCount += 1
-            // 正解ならポイントを追加
-            PointsManager.shared.add(10)
-        } else {
-            resultLabel.text = "❌"
-            resultLabel.textColor = .blue
-            // 不正解ならポイントを減らす
-            PointsManager.shared.subtract(10)
+            let quiz = quizlist[questionNumber]
+            let account = AccountManager.shared.getCurrentAccount()
+            var currentPoints = account.points
+
+            if selected == quiz.answer {
+                resultLabel.text = "⭕️"
+                resultLabel.textColor = .red
+                correctCount += 1
+
+                currentPoints += 10
+            } else {
+                resultLabel.text = "❌"
+                resultLabel.textColor = .blue
+
+                currentPoints -= 10
+            }
+
+            AccountManager.shared.updateAccount(age: account.age, points: currentPoints)
+            
+            maruButton.isEnabled = false
+            batsuButton.isEnabled = false
+            
+            if questionNumber == quizlist.count - 1 {
+                nextButton.setTitle("結果を見る", for: .normal)
+            }
+            nextButton.isHidden = false
         }
-        
-        maruButton.isEnabled = false
-        batsuButton.isEnabled = false
-        
-        if questionNumber == quizlist.count - 1 {
-            nextButton.setTitle("結果を見る", for: .normal)
-        }
-        nextButton.isHidden = false
-    }
-    
     @IBAction func maruTapped(_ sender: Any) {
         checkAnswer(selected: true)
     }

@@ -15,11 +15,14 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         updatePointsLabel()
         
         NotificationCenter.default.addObserver(self, selector: #selector(pointsUpdated), name: .pointsUpdated, object: nil)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updatePointsLabel()
+        updateImage()
     }
     
     let pointlmageDictionary:[Int:String]=[
@@ -33,8 +36,7 @@ class MainViewController: UIViewController {
         2000:"地球（ラフ 透明化）",
         2500:"地球（ラフ 透明化）",
         2900:"地球（ラフ 透明化）",
-        3500:"地球（ラフ 透明化）"
-    ]
+        3500:"地球（ラフ 透明化）"]
 
     
     deinit {
@@ -42,22 +44,23 @@ class MainViewController: UIViewController {
     }
     
     @objc func pointsUpdated() {
-        updatePointsLabel()
-        updateImage()
-    }
-    
-    func updatePointsLabel() {
-        let name = SettingsManager.shared.userName.isEmpty ? "ゲスト" : SettingsManager.shared.userName
-        pointLabel.text = "\(name)さんは現在\(PointsManager.shared.points)ポイントです"
-    }
-    
-    func updateImage() {
-        let currentPoint = PointsManager.shared.points
-        // ポイント数に応じて画像を変更（100pt以上は固定）
-        let imageKey = min((currentPoint / 10) * 10, 100)
-        if let imageName = pointlmageDictionary[imageKey] {
-            earthImageView?.image = UIImage(named: imageName)
+            updatePointsLabel()
+            updateImage()
+        }
+
+        func updatePointsLabel() {
+            let account = AccountManager.shared.getCurrentAccount()
+            let name = account.name.isEmpty ? "ゲスト" : account.name
+            pointLabel.text = "\(name)さんは現在\(account.points)ポイントです"
+        }
+
+        func updateImage() {
+            let account = AccountManager.shared.getCurrentAccount()
+            let currentPoint = account.points
+            
+            let imageKey = min((currentPoint / 10) * 10, 100)
+            if let imageName = pointlmageDictionary[imageKey] {
+                earthImageView?.image = UIImage(named: imageName)
+            }
         }
     }
-
-}
