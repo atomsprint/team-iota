@@ -23,9 +23,6 @@ class IotaRoomViewController: UIViewController {
     /// 表示に必要なポイントをキー、UIImageViewを値とする辞書
     private var itemViewsByPoints: [Int: UIImageView] = [:]
     
-    /// ポイント管理クラス
-    private let pointsManager = PointsManager.shared
-    
     /// ビューが読み込まれたときの初期化処理
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +96,7 @@ class IotaRoomViewController: UIViewController {
     /// ポイントに基づいてアイテムの表示/非表示を更新
     private func updateItemVisibility() {
         // 現在のポイントを取得
-        let currentPoints = pointsManager.points
+        let currentPoints = AccountManager.shared.getCurrentAccount().points
         
         // 各アイテムについて、必要なポイントと現在のポイントを比較して表示/非表示を決める
         for (requiredPoints, itemView) in itemViewsByPoints {

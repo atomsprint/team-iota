@@ -75,8 +75,3 @@ class PointsManager {
         points = 0
     }
 }
-
-// Notification.Nameの拡張で更新通知を定義
-extension Notification.Name {
-    static let pointsUpdated = Notification.Name("pointsUpdated")
-}

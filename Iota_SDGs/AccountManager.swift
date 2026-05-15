@@ -44,10 +44,14 @@ class AccountManager {
     // データを更新して保存
     func updateAccount(age: String, points: Int? = nil) {
         var account = getCurrentAccount()
+        let previousPoints = account.points
         account.age = age
         if let p = points { account.points = p }
         allAccounts[currentUserName] = account
         saveToDisk()
+        if account.points != previousPoints {
+            NotificationCenter.default.post(name: .pointsUpdated, object: nil)
+        }
     }
 
     // スマホ本体に保存
@@ -76,4 +80,9 @@ class AccountManager {
             allAccounts = decoded
         }
     }
+}
+
+// Notification.Nameの拡張で更新通知を定義
+extension Notification.Name {
+    static let pointsUpdated = Notification.Name("pointsUpdated")
 }

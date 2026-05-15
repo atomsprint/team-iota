@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // アプリ終了時にデータを保存
         SettingsManager.shared.saveSettings()
-        PointsManager.shared.savePoints()
     }
 
 
