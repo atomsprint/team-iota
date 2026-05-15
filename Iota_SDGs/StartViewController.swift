@@ -8,14 +8,31 @@
 import UIKit
 
 class StartViewController: UIViewController {
+    
+    private let audioManager = AudioPlayerManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // 事前に音声を読み込む
+        audioManager.load(fileName: "start")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
 
+            // 画面が表示されたら再生
+            audioManager.play(loop: true)
+        print("再生開始: \(audioManager)")
+        }
+
+        override func viewDidDisappear(_ animated: Bool) {
+            super.viewDidDisappear(animated)
+
+            // 画面遷移後に停止
+            audioManager.stop()
+        }
     /*
     // MARK: - Navigation
 

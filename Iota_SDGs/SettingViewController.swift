@@ -47,5 +47,13 @@ class SettingViewController: UIViewController {
         AccountManager.shared.updateAccount(age: ageTextField.text ?? "", points: account.points)
 
     }
+    
+    @IBAction func subtractPointButtonTapped(_ sender: Any) {
+        PointsManager.shared.add(-10)
+    }
+    
+    @IBAction func clearButtonTapped(_ sender: Any) {
+        PointsManager.shared.reset()
+    }
 
 }

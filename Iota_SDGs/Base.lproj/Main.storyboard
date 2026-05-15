@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3f1-WO-yfH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3f1-WO-yfH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,46 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv7-km-giu">
-                                <rect key="frame" x="200" y="621" width="163" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <buttonConfiguration key="configuration" style="filled" title="イオタのへや">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.4823529411764706" green="0.67000001668930054" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="NAy-kF-79h" kind="show" id="Qbd-dZ-MmS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PI-RH-LR4">
-                                <rect key="frame" x="200" y="533" width="163" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="ポイントページ">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.4823529411764706" green="0.67000001668930054" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="D4l-6a-HCz" kind="show" id="VqQ-4C-Iky"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYw-FD-YIq">
-                                <rect key="frame" x="29" y="535" width="163" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="SDGsクイズ">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="baseBackgroundColor" red="0.4823529411764706" green="0.67000001668930054" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="yxg-mt-Kyq" kind="show" id="SWz-sw-Zo6"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０ポイント" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tC5-JH-fUv">
-                                <rect key="frame" x="16" y="476" width="361" height="78"/>
+                                <rect key="frame" x="16" y="524" width="361" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
@@ -68,12 +30,46 @@
                                 <color key="textColor" red="0.94901960784313721" green="0.63529411764705879" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="地球（ラフ 透明化）" translatesAutoresizingMaskIntoConstraints="NO" id="H2K-Jf-7Se">
-                                <rect key="frame" x="16" y="161" width="362" height="344"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv7-km-giu">
+                                <rect key="frame" x="200" y="698" width="163" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <buttonConfiguration key="configuration" style="filled" title="イオタのへや">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.4823529411764706" green="0.67000001668930054" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NAy-kF-79h" kind="show" id="Qbd-dZ-MmS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PI-RH-LR4">
+                                <rect key="frame" x="200" y="610" width="163" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ポイントページ">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.4823529411764706" green="0.67000001668930054" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="D4l-6a-HCz" kind="show" id="VqQ-4C-Iky"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYw-FD-YIq">
+                                <rect key="frame" x="30" y="612" width="163" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SDGsクイズ">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" red="0.4823529411764706" green="0.67000001668930054" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="yxg-mt-Kyq" kind="show" id="SWz-sw-Zo6"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbN-Dt-bGM">
-                                <rect key="frame" x="29" y="621" width="163" height="73"/>
+                                <rect key="frame" x="30" y="698" width="163" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ランキング">
@@ -85,6 +81,10 @@
                                     <segue destination="X37-mA-vcS" kind="show" id="QQM-BA-O64"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="地球（ラフ 透明化）" translatesAutoresizingMaskIntoConstraints="NO" id="H2K-Jf-7Se">
+                                <rect key="frame" x="16" y="183" width="362" height="344"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.85838252859572017" green="0.9262876157407407" blue="0.87995641096622101" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -108,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2171.7557251908397" y="22.535211267605636"/>
+            <point key="canvasLocation" x="2136.6412213740459" y="64.788732394366207"/>
         </scene>
         <!--Iota Room View Controller-->
         <scene sceneID="2x3-7y-qVk">
@@ -294,7 +294,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="subtractPointButtonTapped:" destination="NAy-kF-79h" eventType="touchUpInside" id="N1G-w4-Pry"/>
-                                    <action selector="subtractPointButtonTapped:" destination="G4M-vn-6rq" eventType="touchUpInside" id="iX9-4U-x80"/>
+                                    <action selector="subtractPointButtonTapped:" destination="G4M-vn-6rq" eventType="touchUpInside" id="kWS-Rq-g3o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esc-rr-d41">
@@ -306,8 +306,8 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="clearButtonTapped:" destination="G4M-vn-6rq" eventType="touchUpInside" id="ADB-WT-ubq"/>
                                     <action selector="clearButtonTapped:" destination="NAy-kF-79h" eventType="touchUpInside" id="aZD-WA-g8B"/>
-                                    <action selector="clearButtonTapped:" destination="G4M-vn-6rq" eventType="touchUpInside" id="vLk-Wr-DdE"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iota-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="nWU-Cx-Ngn">
@@ -326,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ieD-H5-1tI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3145.801526717557" y="-551.4084507042254"/>
+            <point key="canvasLocation" x="4305" y="-300"/>
         </scene>
         <!--Point Page View Controller-->
         <scene sceneID="FuH-zj-0Wl">
@@ -1079,7 +1079,7 @@
         <!--Start View Controller-->
         <scene sceneID="zlG-Am-Yo6">
             <objects>
-                <viewController id="WQn-U6-avn" customClass="startViewController" sceneMemberID="viewController">
+                <viewController id="WQn-U6-avn" customClass="StartViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4V3-yY-Nou">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1117,7 +1117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jxt-gy-zde" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="-772"/>
+            <point key="canvasLocation" x="1007" y="-1427"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="v8d-FM-5Gm">
@@ -1459,7 +1459,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgb-2t-UEY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3774.8091603053435" y="22.535211267605636"/>
+            <point key="canvasLocation" x="5021" y="24"/>
         </scene>
         <!--Help Details View Controller-->
         <scene sceneID="pxE-ky-xtA">
@@ -1524,75 +1524,7 @@ Cg
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGF-SX-ytk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4689" y="-704"/>
-        </scene>
-        <!--Help View Controller-->
-        <scene sceneID="fpu-Aa-TyA">
-            <objects>
-                <viewController id="zoP-aI-iHO" customClass="HelpViewController" customModule="Iota_SDGs" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="csL-l6-WUV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" directionalLockEnabled="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rly-nF-Tvl">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" red="0.8344726562" green="0.9106445312" blue="0.869140625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.8344726562" green="0.9106445312" blue="0.869140625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="Id2-rk-aFF"/>
-                                </constraints>
-                                <string key="text">アプリの つかいかた
-SDGsって なに？
-ずっと、人間も 生き物も 自然も、みんなで しあわせに くらせる 地球に するための、大事な やくそく。それがSDGsです！
-
-このアプリでは、SDGsについて まなびながら、自分に できることを やってみることで、ポイントを ためていきます。
-君1人の力は 小さく見えても、みんなの 取り組みが あつまれば、とっても 大きな 力に なります！
-
-とりくみページ
-画面を ひらいて すぐに見えるのが、今日のオススメです。そこに 書いてあることが 1個できたら、となりの スイッチを おしてね。3つ 全部できたら、ポイントが もらえるよ！
-
-もっと いろいろなことに ちょうせんしたい時は、上の とりくみ一らんを おしてね。1つ やるごとに ポイントが もらえます。むずかしいことに チャレンジするほど、たくさん ポイントが もらえるよ！
-
-クイズページ
-SDGsの ◯×クイズに ちょうせんできます。
-5問 ときおわったら、ポイントが もらえるよ。
-せいかいすると 10ポイント増えます。
-まちがえると 10ポイントへっちゃうから、気をつけよう！
-
-イオタ君ページ
-イオタ君は、このアプリの マスコットキャラクターです。
-ポイントを たくさん ゲットすると、イオタ君の アイテムが 増えていきます。君だけの デザインに してあげてね！
-
-ホーム画面
-ホームに ある 地球は、君が がんばるほど きれいになっていきます。
-でも、何日も なにもしないでいると、だんだん よごれていっちゃうんだ。毎日 すこしずつ がんばろう！
-
-ランキングページ
-ここでは、全国の みんなと ポイントを きそいあいます。
-みんなに まけないように、たくさん エコなことをして、1位を めざそう！</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="pch-7t-JkK"/>
-                        <color key="backgroundColor" red="0.81568627450980391" green="0.9137254901960784" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="rly-nF-Tvl" secondAttribute="bottom" id="3hh-7T-FnA"/>
-                            <constraint firstItem="rly-nF-Tvl" firstAttribute="trailing" secondItem="pch-7t-JkK" secondAttribute="trailing" id="7L4-aX-HH7"/>
-                            <constraint firstItem="rly-nF-Tvl" firstAttribute="top" secondItem="csL-l6-WUV" secondAttribute="top" id="Fdg-Hf-cFE"/>
-                            <constraint firstItem="rly-nF-Tvl" firstAttribute="leading" secondItem="pch-7t-JkK" secondAttribute="leading" id="iyB-h7-tTN"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="r79-v1-JQY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5dU-kX-AwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5943" y="-1478"/>
+            <point key="canvasLocation" x="5021" y="873"/>
         </scene>
         <!--Mission View Controller-->
         <scene sceneID="vwL-mv-NU5">
@@ -1928,7 +1860,7 @@ SDGsの ◯×クイズに ちょうせんできます。
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ふきだし3 1" translatesAutoresizingMaskIntoConstraints="NO" id="NgB-Vg-d5R">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ふきだし3" translatesAutoresizingMaskIntoConstraints="NO" id="NgB-Vg-d5R">
                                 <rect key="frame" x="147" y="662" width="256" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.73725490199999999" green="0.87058823529999996" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1975,7 +1907,7 @@ SDGsの ◯×クイズに ちょうせんできます。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLq-Ss-rHt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5052.6717557251905" y="-41.549295774647888"/>
+            <point key="canvasLocation" x="6137" y="24"/>
         </scene>
         <!--Sdgs Details View Controller-->
         <scene sceneID="wBl-n8-tUb">
@@ -1995,6 +1927,14 @@ SDGsの ◯×クイズに ちょうせんできます。
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="iota-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="PrB-ua-PYH">
+                                <rect key="frame" x="133" y="20" width="102" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="item3" translatesAutoresizingMaskIntoConstraints="NO" id="hAy-rQ-gDW">
+                                <rect key="frame" x="167" y="-8" width="66" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b7F-aD-eZm"/>
                         <color key="backgroundColor" red="0.81568627450980391" green="0.9137254901960784" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -2006,7 +1946,7 @@ SDGsの ◯×クイズに ちょうせんできます。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cF-S8-WSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6086" y="-42"/>
+            <point key="canvasLocation" x="7334" y="24"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="uop-V2-dt7">
@@ -2143,7 +2083,7 @@ SDGsの ◯×クイズに ちょうせんできます。
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2h-bU-KUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-508" y="23"/>
+            <point key="canvasLocation" x="-45" y="-1427"/>
         </scene>
         <!--Ranking View Controller-->
         <scene sceneID="kmr-YX-dyG">
@@ -2210,9 +2150,6 @@ SDGsの ◯×クイズに ちょうせんできます。
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="njC-cm-o6d"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k6-Sb-SWn">
                                 <rect key="frame" x="88" y="56" width="217" height="79"/>
@@ -2329,7 +2266,7 @@ SDGsの ◯×クイズに ちょうせんできます。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rd5-KZ-SLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2275.5725190839694" y="-599.29577464788736"/>
+            <point key="canvasLocation" x="2102" y="-699"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cDP-oj-209">
@@ -2497,13 +2434,13 @@ SDGsの ◯×クイズに ちょうせんできます。
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oV8-7y-oWy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5593" y="-740"/>
+            <point key="canvasLocation" x="5993" y="-1427"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wOv-1u-fWf"/>
-        <segue reference="SDd-2F-PyQ"/>
-        <segue reference="mxW-Jw-3Lz"/>
+        <segue reference="czQ-iq-vMv"/>
+        <segue reference="GwY-vu-qEX"/>
+        <segue reference="MGF-Rl-3yD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
@@ -2537,7 +2474,6 @@ SDGsの ◯×クイズに ちょうせんできます。
         <image name="sdg_icon_16_ja_2" width="425.33334350585938" height="425.33334350585938"/>
         <image name="sdg_icon_17_ja_2" width="425.33334350585938" height="425.33334350585938"/>
         <image name="ふきだし3" width="148" height="102"/>
-        <image name="ふきだし3 1" width="148" height="102"/>
         <image name="イオタイオタイオタ" width="213" height="461"/>
         <image name="スクリーンショット 2026-05-10 12.55.30" width="190" height="388.33334350585938"/>
         <image name="スクリーンショット 2026-05-10 12.59.28" width="190" height="392"/>
