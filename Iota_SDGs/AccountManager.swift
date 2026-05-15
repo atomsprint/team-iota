@@ -22,12 +22,18 @@ class AccountManager {
     private var allAccounts: [String: UserAccount] = [:]
     
     // 現在操作中のユーザー名
-    var currentUserName: String = ""
+    var currentUserName: String = "" {
+        didSet {
+            saveCurrentUserName()
+        }
+    }
 
     private let saveKey = "SavedAccounts"
+    private let currentUserKey = "CurrentUserName"
 
     init() {
         loadFromDisk()
+        loadCurrentUserName()
     }
 
     // 今の名前のユーザーデータを取得、なければ新規作成
@@ -48,6 +54,18 @@ class AccountManager {
     private func saveToDisk() {
         if let encoded = try? JSONEncoder().encode(allAccounts) {
             UserDefaults.standard.set(encoded, forKey: saveKey)
+        }
+    }
+
+    private func saveCurrentUserName() {
+        UserDefaults.standard.set(currentUserName, forKey: currentUserKey)
+    }
+
+    private func loadCurrentUserName() {
+        if let savedName = UserDefaults.standard.string(forKey: currentUserKey), !savedName.isEmpty {
+            currentUserName = savedName
+        } else if let firstName = allAccounts.keys.first {
+            currentUserName = firstName
         }
     }
 

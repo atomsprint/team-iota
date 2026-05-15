@@ -10,6 +10,9 @@ class SettingViewController: UIViewController {
         super.viewDidLoad()
 
         nameTextField.addTarget(self, action: #selector(nameDidChange), for: .editingChanged)
+        nameTextField.text = AccountManager.shared.currentUserName
+        let account = AccountManager.shared.getCurrentAccount()
+        ageTextField.text = account.age
     }
 
     @objc func nameDidChange(_ textField: UITextField) {
@@ -20,8 +23,6 @@ class SettingViewController: UIViewController {
         
         // 切り替わった人の年齢を画面に出す
         ageTextField.text = account.age
-        
-
     }
 
     override func viewWillDisappear(_ animated: Bool) {
